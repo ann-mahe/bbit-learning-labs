@@ -18,7 +18,7 @@ class mqProducer(mqProducerInterface):
         self.channel.basic_publish(
             exchange = self.exchange_name,
             routing_key = self.routing_key,
-            body = self.message,
+            body = message,
         )
         self.channel.close()
         self.connection.close()
